@@ -9,13 +9,16 @@ var games = new List<Game>
     new Game { Title = "Tetris", Genre = "Puzzle", ReleaseYear = 1984, Rating = 8.9, Price = 10 }
 };
 
-// SELECT
+// Select
 var allGames = games.Select(game => game.Title);
 foreach (var title in allGames)
     Console.WriteLine(title);
 
-// WHERE
+// Where
 var rpgGames = games.Where(game => game.Genre == "RPG");
 foreach (var title in rpgGames)
     Console.WriteLine(title.Title);
 
+// Any
+var modernGamesExist = games.Any(game => game.ReleaseYear > 2000);
+Console.WriteLine($"Are there any modern games? {modernGamesExist}");
