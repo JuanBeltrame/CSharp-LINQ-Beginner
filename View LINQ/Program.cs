@@ -22,3 +22,8 @@ foreach (var title in rpgGames)
 // Any
 var modernGamesExist = games.Any(game => game.ReleaseYear > 2000);
 Console.WriteLine($"Are there any modern games? {modernGamesExist}");
+
+// OrderBy
+var sortedByYear = games.OrderBy(g => g.ReleaseYear);
+foreach (var game in sortedByYear)
+    Console.WriteLine($"{game.Title} ({game.ReleaseYear})");
