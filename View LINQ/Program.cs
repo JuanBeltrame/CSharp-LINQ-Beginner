@@ -24,6 +24,19 @@ var modernGamesExist = games.Any(game => game.ReleaseYear > 2000);
 Console.WriteLine($"Are there any modern games? {modernGamesExist}");
 
 // OrderBy
-var sortedByYear = games.OrderBy(g => g.ReleaseYear);
-foreach (var game in sortedByYear)
+var sortedAscendingByYear = games.OrderBy(g => g.ReleaseYear);
+foreach (var game in sortedAscendingByYear)
     Console.WriteLine($"{game.Title} ({game.ReleaseYear})");
+
+// OrderByDescending
+var sortedDescendingByYear = games.OrderByDescending(g => g.ReleaseYear);
+foreach (var game in sortedDescendingByYear)
+    Console.WriteLine($"{game.Title} ({game.ReleaseYear})");
+
+// Average
+var averagePrice = games.Average(g => g.Price);
+Console.WriteLine($"Average Game Price: {averagePrice}");
+
+// Max
+var highestRating = games.Max(g => g.Price);
+Console.WriteLine($"Most Expensive Game: {highestRating}");
