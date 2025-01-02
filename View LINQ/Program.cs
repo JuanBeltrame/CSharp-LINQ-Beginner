@@ -9,35 +9,35 @@ var games = new List<Game>
     new Game { Title = "Tetris", Genre = "Puzzle", ReleaseYear = 1984, Rating = 8.9, Price = 10 }
 };
 
-// Select
+// Projection -> Select
 var allGames = games.Select(game => game.Title);
 foreach (var title in allGames)
     Console.WriteLine(title);
 
-// Where
+// Filtering -> Where
 var rpgGames = games.Where(game => game.Genre == "RPG");
 foreach (var title in rpgGames)
     Console.WriteLine(title.Title);
 
-// Any
+// Quantification -> Any
 var modernGamesExist = games.Any(game => game.ReleaseYear > 2000);
 Console.WriteLine($"Are there any modern games? {modernGamesExist}");
 
-// OrderBy
+// Order -> OrderBy
 var sortedAscendingByYear = games.OrderBy(g => g.ReleaseYear);
 foreach (var game in sortedAscendingByYear)
     Console.WriteLine($"{game.Title} ({game.ReleaseYear})");
 
-// OrderByDescending
+// Order -> OrderByDescending
 var sortedDescendingByYear = games.OrderByDescending(g => g.ReleaseYear);
 foreach (var game in sortedDescendingByYear)
     Console.WriteLine($"{game.Title} ({game.ReleaseYear})");
 
-// Average
+// Aggegation -> Average
 var averagePrice = games.Average(g => g.Price);
 Console.WriteLine($"Average Game Price: {averagePrice}");
 
-// Max // First
+// Aggegation -> Max // Element -> First
 var highestRating = games.Max(g => g.Rating);
 var besGame = games.First(g => g.Rating == highestRating);
 Console.WriteLine($"Best Game: {besGame.Title} {besGame.Rating}");
