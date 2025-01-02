@@ -37,6 +37,7 @@ foreach (var game in sortedDescendingByYear)
 var averagePrice = games.Average(g => g.Price);
 Console.WriteLine($"Average Game Price: {averagePrice}");
 
-// Max
-var highestRating = games.Max(g => g.Price);
-Console.WriteLine($"Most Expensive Game: {highestRating}");
+// Max // First
+var highestRating = games.Max(g => g.Rating);
+var besGame = games.First(g => g.Rating == highestRating);
+Console.WriteLine($"Best Game: {besGame.Title} {besGame.Rating}");
