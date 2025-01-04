@@ -68,6 +68,36 @@ foreach (var game in budgetAdventureGames)
     Console.WriteLine(game);
 Console.WriteLine();
 
+// Filtering -> Skip // Take 
 var paginatedGames = games.Skip(2).Take(3);
 foreach (var game in paginatedGames)
     Console.WriteLine(game.Title);
+Console.WriteLine();
+
+
+// Order -> OrderBy
+// Element -> First
+var cheapestGame = games.OrderBy(g => g.Price).First();
+Console.WriteLine($"{cheapestGame.Title} - {cheapestGame.Price} - {cheapestGame.Rating}");
+Console.WriteLine(  );
+
+// Projection -> Select
+// Filtering -> Distinct
+var genres = games.Select(g => g.Genre).Distinct();
+foreach (var genre in genres)
+    Console.WriteLine(genre);
+
+
+// Method Syntax
+var adventureGames = games.Where(g => g.Genre == "Adventure");
+foreach (var game in adventureGames)
+    Console.WriteLine(game.Title);
+Console.WriteLine();
+
+// Query Syntax
+var adventureGamesQuery = from g in games
+                          where g.Genre == "Adventure"
+                          select g;
+foreach (var game in adventureGamesQuery)
+    Console.WriteLine(game.Title);
+Console.WriteLine();
