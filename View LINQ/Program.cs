@@ -67,3 +67,7 @@ var budgetAdventureGames = games
 foreach (var game in budgetAdventureGames)
     Console.WriteLine(game);
 Console.WriteLine();
+
+var paginatedGames = games.Skip(2).Take(3);
+foreach (var game in paginatedGames)
+    Console.WriteLine(game.Title);
