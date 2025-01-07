@@ -101,3 +101,5 @@ var adventureGamesQuery = from g in games
 foreach (var game in adventureGamesQuery)
     Console.WriteLine(game.Title);
 Console.WriteLine();
+
+
