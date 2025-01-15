@@ -19,8 +19,6 @@ IEnumerable<int> queryThree = from d in arregloEnteros
                               orderby d
                               select d;
 
-
-
 // Print Queries
 Console.Write("Query One: ");
 foreach (var a in queryOne)
