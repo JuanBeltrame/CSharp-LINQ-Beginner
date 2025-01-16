@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ Beginners Course 01", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ Beginners Course 02", "LINQ Beginners Course 02\LINQ Beginners Course 02.csproj", "{9B76AFD9-AF50-4EAA-A4C5-F16DD10DEAF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ Beginners Course 03", "LINQ Beginners Course 03\LINQ Beginners Course 03.csproj", "{54B88C17-0D9D-43A2-AA9A-EA72A61D3584}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9B76AFD9-AF50-4EAA-A4C5-F16DD10DEAF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B76AFD9-AF50-4EAA-A4C5-F16DD10DEAF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B76AFD9-AF50-4EAA-A4C5-F16DD10DEAF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B88C17-0D9D-43A2-AA9A-EA72A61D3584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B88C17-0D9D-43A2-AA9A-EA72A61D3584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B88C17-0D9D-43A2-AA9A-EA72A61D3584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B88C17-0D9D-43A2-AA9A-EA72A61D3584}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
